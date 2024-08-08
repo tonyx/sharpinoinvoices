@@ -1,0 +1,31 @@
+# .gitignore
+
+# F# build artifacts
+bin/
+obj/
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+
+# Paket dependencies
+.paket/
+paket-files/
+
+# macOS specific files
+.DS_Store
+
+# User-specific files
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# IDE specific files
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

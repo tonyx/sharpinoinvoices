@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="sharpinoSettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <Compile Include="Commons.fs" />
+    <Compile Include="Invoice/Invoice.fs" />
+    <Compile Include="Invoice/Events.fs" />
+    <Compile Include="Invoice/Commands.fs" />
+    <Compile Include="InvoiceContext/Invoices.fs" />
+    <Compile Include="InvoiceContext/Events.fs" />
+    <Compile Include="InvoiceContext/Commands.fs" />
+    <Compile Include="Api.fs" />
+
+    <Compile Include="InvoiceTests.fs" />
+    <Compile Include="Main.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Expecto" Version="10.2.1" />
+    <PackageReference Include="Sharpino" Version="2.5.1" />
+    <PackageReference Include="YoloDev.Expecto.TestSdk" Version="0.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
+    <PackageReference Update="FSharp.Core" Version="8.*" />
+  </ItemGroup>
+</Project>
