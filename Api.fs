@@ -51,6 +51,7 @@ module InvoicesApi =
                 let! invoiceIsReferenced =
                     invoices.InvoicesRefs |> List.contains id
                     |> Result.ofBool "Invoice not found"
+                let! (_, invoice) = invoiceStateViewer id
 
                 let raiseInvoice: AggregateCommand<Invoice, InvoiceEvent> = InvoiceCommand.RaiseInvoice data
                 

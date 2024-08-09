@@ -29,3 +29,4 @@ paket-files/
 *.user
 *.userosscache
 *.sln.docstates
+.fake
