@@ -26,9 +26,9 @@ module InvoicesApi =
 
         member this.CreateInvoice(invoice: Invoice) = 
             result {
-                let addInvoices: Command<Invoices, InvoicesEvents> = InvoicesCommand.AddInvoiceRef invoice.Id
+                let addInvoice: Command<Invoices, InvoicesEvents> = InvoicesCommand.AddInvoiceRef invoice.Id
                 let result =
-                    runInitAndCommand eventStore doNothingBroker invoice addInvoices 
+                    runInitAndCommand eventStore doNothingBroker invoice addInvoice 
                 return! result
             }
 
